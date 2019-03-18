@@ -43,6 +43,7 @@ public class FrontControler extends HttpServlet {
     {
    
     commands.put("PremiereConversion", new PremiereConversion());
+    commands.put("Validation", new Validation());
 
     }
     

@@ -60,6 +60,9 @@
             }
          }
         Map errors=valider.getErrors();
+      
+
+
         %>
     
 <!DOCTYPE html>
@@ -87,7 +90,8 @@
             <span><tag:testTag message="super message"/></span>
             <c:out value = "${valider.isValid}" />
 
-            <form  method="get" action= "page-conversion.jsp"/>
+            <form  method="get" cmd="Validation" action= "FrontControler"/>
+            <input type="hidden" name="cmd" value="Validation" />
                 <table>
                     <tr>  
                         <td>Monnaie de départ:</td> 
