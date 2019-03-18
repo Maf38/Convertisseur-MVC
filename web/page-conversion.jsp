@@ -14,7 +14,7 @@
 <jsp:useBean id= "valider" class="beans.BeanFormulaire" scope="request" >
         <jsp:setProperty name="valider" property="*" />
 </jsp:useBean> 
-     
+
  <%!
         public String afficherSelect(String nom, String valeur) {
                 String result = "";

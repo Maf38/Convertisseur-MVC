@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>FrontControler</servlet-name>
-        <servlet-class>FrontControler</servlet-class>
+        <servlet-name>Controleur</servlet-name>
+        <servlet-class>controleur.FrontControler</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>ServletTest</servlet-name>
-        <servlet-class>controleur.ServletTest</servlet-class>
-    </servlet>
+  
     <servlet-mapping>
-        <servlet-name>FrontControler</servlet-name>
-        <url-pattern>/FrontControler</url-pattern>
+        <servlet-name>Controleur</servlet-name>
+        <url-pattern>/Controleur</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ServletTest</servlet-name>
-        <url-pattern>/ServletTest</url-pattern>
-    </servlet-mapping>
-    <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
-    </session-config>
+    
 </web-app>
