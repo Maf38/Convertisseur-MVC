@@ -13,6 +13,7 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,7 +21,10 @@ import javax.servlet.http.HttpServletResponse;
 /**
  *
  * @author gai
+ * 
+ * 
  */
+@WebServlet("/FrontControler")
 public class FrontControler extends HttpServlet {
 
     /**
@@ -49,6 +53,8 @@ public class FrontControler extends HttpServlet {
             ICommand com=(ICommand)commands.get(cmd);
             String urlSuite=com.execute(request,response);
             request.getRequestDispatcher(urlSuite).forward(request,response);
+            //init();
+            //out.println("<h1>Hello World</h1>");
         }
     }
 
