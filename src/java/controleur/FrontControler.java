@@ -41,20 +41,19 @@ public class FrontControler extends HttpServlet {
     @Override
     public void init()
     {
-        
+   
     commands.put("PremiereConversion", new PremiereConversion());
 
     }
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)  throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String cmd=request.getParameter("cmd");
             ICommand com=(ICommand)commands.get(cmd);
             String urlSuite=com.execute(request,response);
-            request.getRequestDispatcher(urlSuite).forward(request,response);
-            //init();
-            //out.println("<h1>Hello World</h1>");
+            request.getRequestDispatcher(urlSuite).forward(request, response); 
+         
         }
     }
 

@@ -5,6 +5,7 @@
  */
 package controleur;
 
+import beans.BeanFormulaire;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -19,8 +20,8 @@ public class PremiereConversion implements ICommand{
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         
-        
        
+        
         
         return "page-conversion.jsp";
     }
